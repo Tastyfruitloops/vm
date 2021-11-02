@@ -1,0 +1,6 @@
+input
+repeat
+{
+sum
+}
+output

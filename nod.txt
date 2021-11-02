@@ -1,0 +1,10 @@
+input
+input
+while
+{
+compare
+swap
+compare
+lowermax
+}
+output
