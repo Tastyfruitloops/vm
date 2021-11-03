@@ -1,12 +1,10 @@
 /*
-  node-vm.js-code.txt-1/2
-  1-fib-> n
-  2-nod-> a,b  
+  Лобанов А.С. КНМО-102
 */
 
 
 let fs = require('fs');
-
+//Для работы readline-sync запустите npm install readline-sync в среде выполнения
 let readFileSync=require('readline-sync');
 const { exit } = require('process');
 let memory=fs.readFileSync(process.argv[2],"utf-8").toLowerCase().split(/\s+/);
@@ -79,10 +77,4 @@ while(memory[i]!=="bye")
                 i+=2;
                 break;
         } 
-        //if (i==1) {break;}
-    //console.log(i);   
-    //console.log(memory[i]);
-    //console.log(memory[100],memory[101],memory[102]);
-    //tmp++;
-    //if (tmp>60) {break;}
 }
