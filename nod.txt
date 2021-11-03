@@ -1,10 +1,11 @@
-input
-input
-while
-{
-compare
-swap
-compare
-lowermax
-}
-output
+input 100
+input 101
+equals 100 101 102
+move_if 102 27
+is_less 100 101 102
+move_if 102 21
+swap 100 101
+raz 101 100 101
+move 4
+output 100
+bye

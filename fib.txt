@@ -1,6 +1,13 @@
-input
-repeat
-{
-sum
-}
-output
+set 100 0
+set 101 1
+set 102 1
+input 104
+equals 104 102 103
+move_if 103 34
+swap 101 100
+sum 100 101 101
+increase 102
+equals 104 102 103
+move_if_not 103 11
+output 101
+bye
