@@ -9,6 +9,8 @@ let readFileSync=require('readline-sync');
 const { exit } = require('process');
 let memory=fs.readFileSync(process.argv[2],"utf-8").toLowerCase().split(/\s+/);
 //console.log(memory);
+//fix
+//проверка ввода, свап -> move
 let i=0;
 let tmp=0;
 while(memory[i]!=="bye")
@@ -22,7 +24,12 @@ while(memory[i]!=="bye")
             case 'input':
                 let input=readFileSync.question('>');
                 memory[memory[i+1]]=parseInt(input);
+                //console.log(memory[memory[i+1]])
                 i+=2;
+                break;
+            case 'is_int':
+                memory[memory[i+2]]=1*(memory[memory[i+1]]==parseInt(memory[memory[i+1]]));
+                i+=3;
                 break;
             case 'sum':
                 memory[memory[i+3]]=memory[memory[i+1]]+memory[memory[i+2]];
@@ -65,16 +72,26 @@ while(memory[i]!=="bye")
                 memory[memory[i+1]]++;
                 i+=2;
                 break;
-            case 'swap':
+            /*case 'swap':
                 memory[99]=memory[memory[i+1]];
                 memory[memory[i+1]]=memory[memory[i+2]];
                 memory[memory[i+2]]=memory[99];
                 memory[99]=0;
                 i+=3;
                 break;
+            */
+           case 'change':
+               memory[memory[i+1]]=memory[memory[i+2]];
+               i+=3;
+               break;
             case 'output':
                 console.log(memory[memory[i+1]]);
                 i+=2;
                 break;
+            case 'message':
+                console.log(memory[i+1]);
+                i+=2;
+                break;
         } 
+        //console.log(i);
 }

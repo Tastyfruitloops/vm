@@ -1,11 +1,19 @@
 input 100
+is_int 100 105
+move_if_not 105 48
 input 101
+is_int 101 105
+move_if_not 105 48
 equals 100 101 102
-move_if 102 27
+move_if 102 45
 is_less 100 101 102
-move_if 102 21
-swap 100 101
+move_if 102 39 
+change 99 100
+change 100 101
+change 101 99
 raz 101 100 101
-move 4
+move 16
 output 100
+bye
+message ERROR
 bye
