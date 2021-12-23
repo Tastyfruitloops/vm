@@ -8,6 +8,8 @@ let fs = require('fs');
 let readFileSync=require('readline-sync');
 const { exit } = require('process');
 let memory=fs.readFileSync(process.argv[2],"utf-8").toLowerCase().split(/\s+/);
+//for (let i=0;i<memory.length;i++) {console.log(i,memory[i]);}
+//exit();
 //console.log(memory);
 //fix
 //проверка ввода, свап -> move
@@ -29,6 +31,10 @@ while(memory[i]!=="bye")
                 break;
             case 'is_int':
                 memory[memory[i+2]]=1*(memory[memory[i+1]]==parseInt(memory[memory[i+1]]));
+                i+=3;
+                break;
+            case 'is_pos':
+                memory[memory[i+2]]=1*(memory[memory[i+1]]==Math.abs(memory[memory[i+1]]));
                 i+=3;
                 break;
             case 'sum':
@@ -94,4 +100,5 @@ while(memory[i]!=="bye")
                 break;
         } 
         //console.log(i);
+       // if (isNaN(i)) {exit();}
 }

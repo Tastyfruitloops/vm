@@ -1,18 +1,30 @@
+set 200 0
+set 201 -1
 input 100
 is_int 100 105
-move_if_not 105 48
+is_pos 100 106
+equals 100 200 107
+move_if_not 105 88
+move_if 107 88
+move_if 106 31
+mul 100 201 100
 input 101
 is_int 101 105
-move_if_not 105 48
+is_pos 101 106
+equals 101 200 107
+move_if_not 105 88
+move_if 107 88
+move_if 106 56
+mul 101 201 101
 equals 100 101 102
-move_if 102 45
+move_if 102 85
 is_less 100 101 102
-move_if 102 39 
+move_if 102 79 
 change 99 100
 change 100 101
 change 101 99
 raz 101 100 101
-move 16
+move 56
 output 100
 bye
 message ERROR

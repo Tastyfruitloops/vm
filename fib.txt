@@ -1,15 +1,24 @@
 set 100 0
 set 101 1
 set 102 1
+set 200 0
 input 104
+equals 104 200 103
+move_if 103 65
+is_int 104 105
+is_pos 104 106
+move_if_not 105 65
+move_if_not 106 65
 equals 104 102 103
-move_if 103 40
+move_if 103 62
 change 99 100
 change 100 101
 change 101 99
 sum 100 101 101
 increase 102
 equals 104 102 103
-move_if_not 103 11
+move_if_not 103 33
 output 101
+bye
+message ERROR
 bye
